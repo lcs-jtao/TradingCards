@@ -9,12 +9,25 @@ import SwiftUI
 
 struct ListView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        List {
+            ForEach(listOfInfo) { currentItem in
+                NavigationLink(destination: {
+                    DetailView(item: currentItem)
+                }, label: {
+                    ListItemsView(imageName: currentItem.imageName,
+                                  playerName: currentItem.playerName,
+                                  description: currentItem.specialty)
+                })
+            }
+        }
+        .navigationTitle("Badminton Cards")
     }
 }
 
 struct ListView_Previews: PreviewProvider {
     static var previews: some View {
-        ListView()
+        NavigationView {
+            ListView()
+        }
     }
 }

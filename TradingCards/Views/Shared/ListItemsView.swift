@@ -8,13 +8,31 @@
 import SwiftUI
 
 struct ListItemsView: View {
+    let imageName: String
+    let playerName: String
+    let description: String
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        HStack {
+            Image(imageName)
+                .resizable()
+                .frame(width: 50, height: 60)
+                .clipShape(Circle())
+                .clipped()
+            VStack(alignment: .leading) {
+                Text(playerName)
+                    .bold()
+                Text(description)
+                    .font(.caption)
+            }
+        }
     }
 }
 
 struct ListItemsView_Previews: PreviewProvider {
     static var previews: some View {
-        ListItemsView()
+        ListItemsView(imageName: "Rebecca",
+                      playerName: "Rebecca Baker",
+                      description: "Badminton Pro - CHICAGO")
     }
 }
