@@ -50,7 +50,7 @@ struct DetailView: View {
                             Text("Height: " + String(item.heightInCentimetres) + "cm")
                                 .frame(width: 145,
                                        height: 30)
-                            Text("Weight: " + String(item.weightInGrams) + "g")
+                            Text("Weight: " + String(item.weightInPound) + "lb")
                         }
                         VStack {
                             Text("Birthday: " + item.birthday)

@@ -19,7 +19,7 @@ struct TradingCards: Identifiable {
     
     // Information Block
     let heightInCentimetres: Int
-    let weightInGrams: Int
+    let weightInPound: Int
     let birthday: String
     let bornPlace: String
     
