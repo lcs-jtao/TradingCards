@@ -21,7 +21,7 @@ struct DetailView: View {
                         .resizable()
                         .scaledToFit()
                         .clipShape(RoundedRectangle(cornerRadius: 30))
-                        .frame(width: 350,
+                        .frame(width: 500,
                                height: 300)
                     Circle()
                         .fill(Color.gray)
@@ -55,7 +55,7 @@ struct DetailView: View {
                 ZStack {
                     Rectangle()
                         .fill(Color.gray.opacity(0.7))
-                        .frame(width: 350, height: 70)
+                        .frame(width: 500, height: 70)
                     HStack {
                         VStack {
                             Text("Height: " + String(item.heightInCentimetres) + "cm")
